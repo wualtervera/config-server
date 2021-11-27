@@ -7,7 +7,9 @@ spring:
         git:
           default-label: main
           uri: https://github.com/wualtervera/config-server
-          search-paths:
-            - config-microservices
+          search-paths: config-microservices
+          username: ${GIT_USER}
+          password: ${GIT_PASSWORD}
+          skip-ssl-validation: true
   application:
     name: config-server
