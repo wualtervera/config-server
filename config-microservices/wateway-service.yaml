@@ -46,3 +46,11 @@ spring:
           uri: lb://transfer-service
           predicates:
             - Path=/api/v1/transfer/**
+        - id: mobilewallet-service
+          uri: lb://mobilewallet-service
+          predicates:
+            - Path=/api/v1/wallet/**
+        - id: mobilewallet-transaction-service
+          uri: lb://mobilewallet-transaction-service
+          predicates:
+            - Path=/api/v1/walletTransaction/**
