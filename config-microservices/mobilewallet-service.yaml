@@ -9,10 +9,25 @@ eureka:
     instance:
       instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
 
-
 custom:
   kafka:
     bootstrap-servers: localhost:9092
     topic-name: topic-mobilewallet-transaction
     topic-name-mobilewallet: topic-mobilewallet
     group-id: group-id
+
+
+#Redis - Mongo
+spring:
+  redis:
+    host: 127.0.0.1
+    port: 6379
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: bootcamp
+      repositories:
+        enabled: true
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
