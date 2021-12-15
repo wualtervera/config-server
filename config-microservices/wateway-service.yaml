@@ -54,3 +54,12 @@ spring:
           uri: lb://mobilewallet-transaction-service
           predicates:
             - Path=/api/v1/walletTransaction/**
+        - id: bootcoin-service
+          uri: lb://bootcoin-service
+          predicates:
+            - Path=/api/v1/bootcoin/**
+        - id: bootcoin-transaction-service
+          uri: lb://bootcoin-transaction-service
+          predicates:
+            - Path=/api/v1/bootcoinTransaction/**
+            - Path=/api/v1/tasa/**
