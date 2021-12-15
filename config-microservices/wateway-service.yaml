@@ -62,4 +62,4 @@ spring:
           uri: lb://bootcoin-transaction-service
           predicates:
             - Path=/api/v1/bootcoinTransaction/**
-            - Path=/api/v1/tasa/**
+
